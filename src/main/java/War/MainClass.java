@@ -80,4 +80,29 @@ public class MainClass {
 		}
 		return consolidated.keySet();
 	}
+	
+	public static Set<String> dialledAndRecieved(CallObject callObject1,
+			CallObject callObject2) {
+		LinkedHashMap<String, String> consolidated = new LinkedHashMap<String, String>();
+		List<String> m1 = callObject1.getMlist();
+		List<String> m2 = callObject2.getMlist();
+		List<String> i1 = callObject1.getIlist();
+		List<String> i2 = callObject2.getIlist();
+		List<String> o1 = callObject1.getOlist();
+		List<String> o2 = callObject2.getOlist();
+		for (String number : i1) {
+				consolidated.put(number, "");
+		}
+		for (String number : o1) {
+			consolidated.put(number, "");
+		}
+		for (String number : i2) {
+			consolidated.put(number, "");
+		}
+		for (String number : o2) {
+			consolidated.put(number, "");
+		}
+		return consolidated.keySet();
+	}
+	
 }
