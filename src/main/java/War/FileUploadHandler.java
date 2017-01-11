@@ -123,15 +123,22 @@ public class FileUploadHandler extends HttpServlet {
 			request.setAttribute("message", "File Uploaded Successfully");
 			CallObject c2 = MainClass.read(out2);
 			CallObject c1 = MainClass.read(out1);
-			Set<String> callset = MainClass.comparecalls(c1, c2);
-			List<String> callList = new ArrayList<String>();
-			for (String a : callset) {
-				callList.add(a);
+			Set<String> missedset = MainClass.comparecalls(c1, c2);
+			List<String> missedList = new ArrayList<String>();
+			for (String a : missedset) {
+				missedList.add(a);
 			}
+			Set<String> dialledset = MainClass.dialledAndRecieved(c1, c2);
+			List<String> dialledList = new ArrayList<String>();
+			for (String a : dialledset) {
+				dialledList.add(a);
+			}
+			
 			if (requestSource.contains("sendMessage")) {
 				sendMessage(message, callList);
 			}
-			request.setAttribute("calllist", callList);
+			request.setAttribute("missedlist", missedList);
+			request.setAttribute("dialledlist", dialledList);
 			request.getRequestDispatcher("/result.jsp").forward(request,
 					response);
 		}
