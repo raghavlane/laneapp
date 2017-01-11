@@ -135,7 +135,7 @@ public class FileUploadHandler extends HttpServlet {
 			}
 			
 			if (requestSource.contains("sendMessage")) {
-				sendMessage(message, callList);
+				sendMessage(message, missedList);
 			}
 			request.setAttribute("missedlist", missedList);
 			request.setAttribute("dialledlist", dialledList);
