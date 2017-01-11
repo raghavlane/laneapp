@@ -156,7 +156,7 @@ public class FileUploadHandler extends HttpServlet {
 
 	private static void sendMessage(String finalmessage, List<String> callList) {
 		String url = "http://smshorizon.co.in/api/sendsms.php?";
-		String user = "user=raghavlane&apikey=mhRoSeAypeDpJ5xogz2C&senderid=SMSIND&type=txt";
+		String user = "user=raghavlane&apikey=2222222&senderid=SMSIND&type=txt";
 		String message ="&message=";
 		String mobile = "&mobile=";
 		finalmessage = finalmessage.replaceAll(" ", "%20");
@@ -217,8 +217,10 @@ public class FileUploadHandler extends HttpServlet {
 			password = props.getProperty("PASSWORD");
 			senderId = props.getProperty("SENDERID");
 			UPLOAD_DIRECTORY = props.getProperty("UPLOAD_DIRECTORY");
+			UPLOAD_DIRECTORY="/opt/"
 		} catch (IOException e) {
 			e.printStackTrace();
+			UPLOAD_DIRECTORY="/opt/"
 		}
 	}
 }
