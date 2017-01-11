@@ -15,15 +15,15 @@
 		<table>
 		<tr> <td><h4> Missed List</h4></td></tr>
 			<%
-				ArrayList<String> list = (ArrayList<String>) request
+				ArrayList<String> misslist = (ArrayList<String>) request
 						.getAttribute("missedlist");
-				for (String call : list) {
+				for (String call : misslist) {
 					out.println("<tr><td>" + call + "</td></tr>");
 				}
 			%>
 		</table>
 		<table>
-			<c:forEach items="${list}" var="item">
+			<c:forEach items="${misslist}" var="item">
 				<tr>
 					<td><c:out value="${item}"/></td>
 				</tr>
