@@ -13,10 +13,27 @@
 	<div id="result">
 		<h3>${requestScope["message"]}</h3><br>
 		<table>
-		<tr> <td><h4> Final List number</h4></td></tr>
+		<tr> <td><h4> Missed List</h4></td></tr>
 			<%
 				ArrayList<String> list = (ArrayList<String>) request
-						.getAttribute("calllist");
+						.getAttribute("missedlist");
+				for (String call : list) {
+					out.println("<tr><td>" + call + "</td></tr>");
+				}
+			%>
+		</table>
+		<table>
+			<c:forEach items="${list}" var="item">
+				<tr>
+					<td><c:out value="${item}"/></td>
+				</tr>
+			</c:forEach>
+		</table>
+		<table>
+		<tr> <td><h4> Dialled and Recieved List</h4></td></tr>
+			<%
+				ArrayList<String> list = (ArrayList<String>) request
+						.getAttribute("dialledlist");
 				for (String call : list) {
 					out.println("<tr><td>" + call + "</td></tr>");
 				}
