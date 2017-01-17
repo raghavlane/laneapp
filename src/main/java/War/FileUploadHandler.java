@@ -224,10 +224,10 @@ public class FileUploadHandler extends HttpServlet {
 			password = props.getProperty("PASSWORD");
 			senderId = props.getProperty("SENDERID");
 			UPLOAD_DIRECTORY = props.getProperty("UPLOAD_DIRECTORY");
-			UPLOAD_DIRECTORY="/tmp/";
+			UPLOAD_DIRECTORY="/tmp";
 		} catch (IOException e) {
 			e.printStackTrace();
-			UPLOAD_DIRECTORY="/tmp/";
+			UPLOAD_DIRECTORY="/tmp";
 		}
 	}
 }
