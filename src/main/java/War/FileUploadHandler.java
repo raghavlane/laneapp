@@ -123,13 +123,6 @@ public class FileUploadHandler extends HttpServlet {
 			request.setAttribute("message", "File Uploaded Successfully");
 			CallObject c2 = MainClass.read(out2);
 			CallObject c1 = MainClass.read(out1);
-			request.setAttribute("out1", out1);
-			request.setAttribute("out1done","out1 done");
-			request.setAttribute("out2", out2);
-			request.setAttribute("out2done", "out2done");
-			request.setAttribute("c1", c1.toString());
-			request.setAttribute("c2", c2.toString());
-			request.setAttribute("final", "final done");
 			Set<String> missedset = MainClass.comparecalls(c1, c2);
 			List<String> missedList = new ArrayList<String>();
 			for (String a : missedset) {
