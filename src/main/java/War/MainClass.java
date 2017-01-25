@@ -45,6 +45,7 @@ public class MainClass {
 			}
 		} catch (BiffException e) {
 			e.printStackTrace();
+			return callObject;
 		}
 		callObject.setIlist(ilist);
 		callObject.setMlist(mlist);
