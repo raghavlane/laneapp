@@ -12,6 +12,10 @@
 <body>
 	<div id="result">
 		<h3>${requestScope["message"]}</h3><br>
+		<h3>${requestScope["out1"]}</h3><br>
+		<h3>${requestScope["out2"]}</h3><br>
+		<h3>${requestScope["c1"]}</h3><br>
+		<h3>${requestScope["c2"]}</h3><br>
 		<table>
 		<tr> <td><h4> Missed List</h4></td></tr>
 			<%
