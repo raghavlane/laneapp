@@ -14,11 +14,10 @@ import jxl.read.biff.BiffException;
 
 public class MainClass {
 
-	private static List<String> mlist = new ArrayList<String>();
-	private static List<String> olist = new ArrayList<String>();
-	private static List<String> ilist = new ArrayList<String>();
-
 	public static CallObject read(String inputFile) throws IOException {
+		private static List<String> mlist = new ArrayList<String>();
+		private static List<String> olist = new ArrayList<String>();
+		private static List<String> ilist = new ArrayList<String>();
 		CallObject callObject = new CallObject();
 		File inputWorkbook = new File(inputFile);
 		Workbook w;
