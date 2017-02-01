@@ -139,6 +139,8 @@ public class FileUploadHandler extends HttpServlet {
 			}
 			request.setAttribute("missedlist", missedList);
 			request.setAttribute("dialledlist", dialledList);
+			request.setAttribute("missedlist1", c1.getMlist());
+			request.setAttribute("missedlist2", c2.getMlist());
 			request.getRequestDispatcher("/result.jsp").forward(request,
 					response);
 		}
